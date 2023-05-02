@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=&display=swap");
+.component-header {
+  margin-top: 10%;
+  margin-bottom: 2%;
+  padding: 15px;
+  position: relative;
+  font-weight: normal;
+  font-family: "Ultra";
+  font-size: 72px;
+  text-align: center;
+  color: var(--light-color);
+  /* text-shadow: 6px 0px black ;
+  -webkit-text-stroke: 2px black; */
+}
+
+.component-header img {
+  position: relative;
+  top: 6px;
+  padding: 0 14px;
+}
+
+:root {
+  --light-color: #f3f3fe;
+  --dark-color: #181818;
+  --border-top-color: rgba(0, 0, 0, 0.1);
+  --link-hover-color: rgba(255, 255, 255, 0.2);
+  --title-font-family: "Playfair Display", "serif";
+  --body-font-family: "Poppins", "sans-serif";
+  --container-width: 96rem;
+  --container-padding: 1.5rem;
+  --section-vertical-spacing: 8rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+body.dark-theme {
+  --light-color: #181818;
+  --dark-color: #f3f3fe;
+  --border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.button {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: transparent;
+}
+.icon_change_btn {
+  width: 25px;
+  height: 25px;
+  color: var(--light-color);
+  background: var(--dark-color);
+}
+
+.btn-position {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}

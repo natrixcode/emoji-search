@@ -1,0 +1,53 @@
+<button type="button" class="button icon-button theme-toggle-button">
+  <i class="bx bx-toggle-left theme-off"></i>
+  <i class="bx bx-toggle-right theme-on"></i>
+</button>
+
+<script>
+  const themeToggleButton = document.querySelector(".theme-toggle-button");
+  const bodyElement = document.body;
+  const currentTheme = localStorage.getItem("darkTheme");
+
+  if (currentTheme) {
+    bodyElement.classList.add("dark-theme");
+  }
+
+  const toggleTheme = () => {
+    bodyElement.classList.toggle("dark-theme");
+    if (bodyElement.classList.contains("dark-theme")) {
+      localStorage.setItem("darkTheme", "active");
+    } else {
+      localStorage.removeItem("darkTheme");
+    }
+  };
+
+  themeToggleButton.addEventListener("click", toggleTheme);
+</script>
+
+<head>
+  <style>
+    :root {
+      --light-color: #f3f3fe;
+      --dark-color: #363636;
+      --border-top-color: rgba(0, 0, 0, 0.1);
+      --link-hover-color: rgba(255, 255, 255, 0.2);
+      --title-font-family: "Playfair Display", "serif";
+      --body-font-family: "Poppins", "sans-serif";
+      --container-width: 96rem;
+      --container-padding: 1.5rem;
+      --section-vertical-spacing: 8rem;
+    }
+
+    body.dark-theme {
+      --light-color: #000;
+      --dark-color: #fff;
+      --border-top-color: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+
+const removeActiveLinkClass = e => {
+if(e.target.classList.contains('list-link')) {
+menuElement.classList.remove('active');
+menuToggleButton.classList.remove('active'); } }
+document.addEventListener('click',removeActiveLinkClass);
